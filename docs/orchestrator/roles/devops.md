@@ -10,6 +10,8 @@
 - จัด script สำหรับ log/cleanup (`docker compose logs`, `down -v`, backup volume)
 - เตรียม/ดูแล workflow CI (`.github/workflows/ci.yml`) และ secrets
 - อัปเดต `docs/orchestrator/status/devops.md`, runbook, deploy options
+- ติดตั้ง/ดูแลระบบ monitoring (Prometheus/Grafana หรือเทียบเท่า) สำหรับ CPU/RAM/IO, latency, health endpoint
+- สร้าง watchdog แจ้งเตือน response time > 30 วินาที และรวมผลสรุปให้ PM/SA
 
 ## ทักษะที่จำเป็น
 - Docker, Compose, CI (GitHub Actions), shell scripting
@@ -25,6 +27,7 @@
 - ต้องจับ latency/timeout เร็ว (health watchdog >30s)
 - Rebuild ด้วย `--no-cache` เมื่อ dependency เปลี่ยน หรืองานล่ม
 - ต้องเตรียม mock-first + fallback network (127.0.0.1) ร่วมกับ System Admin
+- ควรทำ dashboard สรุปสถานะระบบให้ทุกทีมเข้าดูได้
 
 ## ภารกิจต่อเนื่อง
 - สร้าง script health-check/report สำหรับ host และ container
