@@ -14,3 +14,6 @@ Favor pytest with descriptive filenames (`tests/test_query_endpoint.py`) and sce
 
 ## Commit & Pull Request Guidelines
 Use Conventional Commit prefixes (`feat:`, `fix:`, `chore:`, `docs:`). Limit subject lines to 72 characters and keep body text wrapped at 100 characters. Every PR must describe scope, validation commands (tests/lint/docker), and link related Jira/GitHub issues. Include screenshots or cURL output when touching `/ask`, `/upload`, or n8n flows. Do not request review until CI is green and security/PDPA notes (if any) are recorded in `docs/decisions/`.
+
+## Role Playbooks
+บทบาทแต่ละทีมมีแฟ้มหน้าที่ ความรับผิดชอบ ทักษะ และบทเรียนอยู่ใน `docs/orchestrator/roles/` (เช่น `backend.md`, `security.md`, `qa.md`). อัปเดตทุกครั้งที่มี incident หรือ onboarding เพื่อ reuse ในโครงการถัดไป และอ้างอิงควบคู่กับสถานะรายวันใน `docs/orchestrator/status/`.
